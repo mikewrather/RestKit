@@ -33,6 +33,8 @@ BOOL RKClassIsCollection(Class aClass)
 {
     return (aClass && ([aClass isSubclassOfClass:[NSSet class]] ||
                        [aClass isSubclassOfClass:[NSArray class]] ||
+                       [NSStringFromClass(aClass) isEqualToString:@"RLMArrayLinkView"] ||
+					   [NSStringFromClass(aClass) isEqualToString:@"RLMArray"] ||
                        [aClass isSubclassOfClass:[NSOrderedSet class]]));
 }
 
